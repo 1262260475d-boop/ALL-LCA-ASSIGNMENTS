@@ -1,0 +1,92 @@
+LAB 4A
+Q. Write a program in c program to perform basics operations such as addition of 2 matrix
+
+#include <stdio.h>
+int main() {
+int rows, cols;
+// Input the number of rows and columns
+printf("Enter the number of rows: ");
+scanf("%d", &rows);
+printf("Enter the number of columns: ");
+scanf("%d", &cols);
+int mat1[rows][cols], mat2 [rows][cols], result[rows][cols];
+// Input elements of the first matrix
+printf("Enter elements of first matrix:\n");
+for (int i = 0; i< rows; i++) {
+for (int j = 0; j < cols; j++) {
+printf("Element [%d][%d]: ", i, j);
+scanf("%d" , &mat1[i][j]);
+}
+}
+// input elements of second matrix LAB 4B
+printf("\nEnter elements of second matrix:\n");
+for (int i = 0; i < rows; i++) {
+for (int j = 0; j < cols; j++) {
+printf("Element [%d][%d]: ", i, j);
+scanf("%d", &mat2[i][j]);
+}
+}
+// performing matrix addition
+for (int i = 0; i < rows; i++) {
+for (int j = 0; j < cols; j++) {
+result[i][j] = mat1[i][j] + mat2[i][j];
+}
+}
+//displaying result
+printf("\nResultant matrix after addition:\n");
+for (int i = 0; i < rows; i++) {
+for (int j = 0; j < cols; j++) {
+printf("%d\t" , result[i][j]); }
+}
+return 0;
+}
+
+Q. A bioengineer lab recorded 2 sets of measurements data from biologicalsamples in the form
+of 2 by 2 matrix , write a C programm to add 2 matrices by adding for corresponding elements
+and display resultant matrix
+
+
+#include <stdio.h>
+int main()
+{
+int A[2][2],B[2][2],C[2][2];
+int i,j;
+//input first matrix
+printf("Enter the measurements for first biological sample:\n");
+for(i =0;i<2;i++)
+{
+for(j=0;j<2;j++)
+{
+scanf("%d",&A[i][j]);
+}
+}
+//input second matrix
+printf("enter the measurements for second biological sample:\n");
+for(i=0;i<2;i++)
+{
+for(j=0;j<2;j++)
+{
+scanf("%d",&B[i][j]);
+}
+}
+//Add the two matrices
+for(i=0;i<2;i++)
+{
+for(j=0;j<2;j++)
+{
+C[i][j]=A[i][j]+B[i][j];
+} }
+//display resultant matrix
+printf("\nResultant measurment matrix:\n");
+for(i=0;i<2;i++)
+{
+for(j=0;j<2;j++)
+{
+printf("%d\t",C[i][j]);
+}
+printf("\n");
+}
+return 0;
+}
+
+
